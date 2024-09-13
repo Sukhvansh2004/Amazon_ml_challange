@@ -7,12 +7,13 @@ Problem Statement:
 
 
 DATASETS:
-
-
-
-
+https://www.retail-786k.org/ -- External Dataset
+https://drive.google.com/file/d/18EAz3zSjL09MQ-ZReujjGHhXXVGjCVP7/view?usp=sharing -- Competition Dataset [refer to train.csv file]
 
 MODELS:
-
+1. Cogvlm2
+  - https://huggingface.co/THUDM/cogvlm2-llama3-chat-19B 
+  - https://github.com/THUDM/CogVLM2 (has finetuning script)
+  
 
 
