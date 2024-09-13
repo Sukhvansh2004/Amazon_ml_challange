@@ -9,6 +9,7 @@ Problem Statement:
 DATASETS:
 https://www.retail-786k.org/ -- External Dataset
 https://drive.google.com/file/d/18EAz3zSjL09MQ-ZReujjGHhXXVGjCVP7/view?usp=sharing -- Competition Dataset [refer to train.csv file]
+https://ieeexplore.ieee.org/document/8978122 --[extradataset for training]full dataset that is having question answer pairs {https://drive.google.com/drive/folders/1_GYPY5UkUy7HIcR0zq3ZCFgeZN7BAfm_}
 
 MODELS:
 1. Cogvlm2
