@@ -1,0 +1,264 @@
+DevTools listening on ws://127.0.0.1:51550/devtools/browser/33965153-7a0d-4dca-ae8a-8e47902a675f
+
+DevTools listening on ws://127.0.0.1:51552/devtools/browser/ecbe3037-cfc2-4e8d-a38f-d9629cd7b2f9
+
+DevTools listening on ws://127.0.0.1:51553/devtools/browser/2b89587f-0141-4176-9cd8-f329925727ab
+
+DevTools listening on ws://127.0.0.1:51553/devtools/browser/2b89587f-0141-4176-9cd8-f329925727ab
+
+DevTools listening on ws://127.0.0.1:51553/devtools/browser/2b89587f-0141-4176-9cd8-f329925727ab
+DevTools listening on ws://127.0.0.1:51553/devtools/browser/2b89587f-0141-4176-9cd8-f329925727ab
+DevTools listening on ws://127.0.0.1:51553/devtools/browser/2b89587f-0141-4176-9cd8-f329925727ab
+DevTools listening on ws://127.0.0.1:51553/devtools/browser/2b89587f-0141-4176-9cd8-f329925727ab
+DevTools listening on ws://127.0.0.1:51553/devtools/browser/2b89587f-0141-4176-9cd8-f329925727ab
+
+DevTools listening on ws://127.0.0.1:51554/devtools/browser/72ef1e35-aa8e-4cd5-9f44-4612f0ba435f
+
+DevTools listening on ws://127.0.0.1:51557/devtools/browser/f03f87ce-c452-4276-a55a-877bf486d359
+Error processing 41-NCxNuBxL.jpg: Message: 
+Stacktrace:
+        GetHandleVerifier [0x005AD933+25811]
+        (No symbol) [0x0053E314]
+        (No symbol) [0x00432523]
+        (No symbol) [0x00477483]
+        (No symbol) [0x0047765B]
+        (No symbol) [0x004B6BA2]
+        (No symbol) [0x0049AD74]
+        (No symbol) [0x004B46F0]
+        (No symbol) [0x0049AAC6]
+        (No symbol) [0x0046BEFD]
+        (No symbol) [0x0046C8FD]
+        GetHandleVerifier [0x0087F143+2981091]
+        GetHandleVerifier [0x008D2FF9+3324825]
+        GetHandleVerifier [0x0063B32F+605903]
+        GetHandleVerifier [0x00642CBC+637020]
+        (No symbol) [0x00546F4D]
+        (No symbol) [0x00543DD8]
+        (No symbol) [0x00543F75]
+        (No symbol) [0x00536406]
+        BaseThreadInitThunk [0x75C07BA9+25]
+        RtlInitializeExceptionChain [0x77BAC11B+107]
+        RtlClearBits [0x77BAC09F+191]
+Error processing 417NJrPEk+L.jpg: Message:
+Stacktrace:
+        GetHandleVerifier [0x005AD933+25811]
+        (No symbol) [0x0053E314]
+        (No symbol) [0x00432523]
+        (No symbol) [0x00477483]
+        (No symbol) [0x0047765B]
+        (No symbol) [0x004B6BA2]
+        (No symbol) [0x0049AD74]
+        (No symbol) [0x004B46F0]
+        (No symbol) [0x0049AAC6]
+        (No symbol) [0x0046BEFD]
+        (No symbol) [0x0046C8FD]
+        GetHandleVerifier [0x0087F143+2981091]
+        GetHandleVerifier [0x008D2FF9+3324825]
+        GetHandleVerifier [0x0063B32F+605903]
+        GetHandleVerifier [0x00642CBC+637020]
+        (No symbol) [0x00546F4D]
+        (No symbol) [0x00543DD8]
+        (No symbol) [0x00543F75]
+        (No symbol) [0x00536406]
+        BaseThreadInitThunk [0x75C07BA9+25]
+        RtlInitializeExceptionChain [0x77BAC11B+107]
+        RtlClearBits [0x77BAC09F+191]
+
+
+Error processing 417SThj+SrL.jpg: Message: 
+Stacktrace:
+        GetHandleVerifier [0x005AD933+25811]
+        (No symbol) [0x0053E314]
+        (No symbol) [0x00432523]
+        (No symbol) [0x00477483]
+        (No symbol) [0x0047765B]
+        (No symbol) [0x004B6BA2]
+        (No symbol) [0x0049AD74]
+        (No symbol) [0x004B46F0]
+        (No symbol) [0x0049AAC6]
+        (No symbol) [0x0046BEFD]
+        (No symbol) [0x0046C8FD]
+        GetHandleVerifier [0x0087F143+2981091]
+        GetHandleVerifier [0x008D2FF9+3324825]
+        GetHandleVerifier [0x0063B32F+605903]
+        GetHandleVerifier [0x00642CBC+637020]
+        (No symbol) [0x00546F4D]
+        (No symbol) [0x00543DD8]
+        (No symbol) [0x00543F75]
+        (No symbol) [0x00536406]
+        BaseThreadInitThunk [0x75C07BA9+25]
+        RtlInitializeExceptionChain [0x77BAC11B+107]
+        RtlClearBits [0x77BAC09F+191]
+
+Error processing 417SThj+SrL.jpg: Message: 
+Stacktrace:
+        GetHandleVerifier [0x005AD933+25811]
+        (No symbol) [0x0053E314]
+        (No symbol) [0x00432523]
+        (No symbol) [0x00477483]
+        (No symbol) [0x0047765B]
+        (No symbol) [0x004B6BA2]
+        (No symbol) [0x0049AD74]
+        (No symbol) [0x004B46F0]
+        (No symbol) [0x0049AAC6]
+        (No symbol) [0x0046BEFD]
+        (No symbol) [0x0046C8FD]
+        GetHandleVerifier [0x0087F143+2981091]
+        GetHandleVerifier [0x008D2FF9+3324825]
+        GetHandleVerifier [0x0063B32F+605903]
+        GetHandleVerifier [0x00642CBC+637020]
+        (No symbol) [0x00546F4D]
+        (No symbol) [0x00543DD8]
+        (No symbol) [0x00543F75]
+        (No symbol) [0x00536406]
+        BaseThreadInitThunk [0x75C07BA9+25]
+        RtlInitializeExceptionChain [0x77BAC11B+107]
+        RtlClearBits [0x77BAC09F+191]
+
+Error processing 41-NCxNuBxL.jpg: Message: 
+Stacktrace:
+        GetHandleVerifier [0x005AD933+25811]
+        (No symbol) [0x0053E314]
+        (No symbol) [0x00432523]
+        (No symbol) [0x00477483]
+        (No symbol) [0x0047765B]
+        (No symbol) [0x004B6BA2]
+        (No symbol) [0x0049AD74]
+        (No symbol) [0x004B46F0]
+        (No symbol) [0x0049AAC6]
+        (No symbol) [0x0046BEFD]
+        (No symbol) [0x0046C8FD]
+        GetHandleVerifier [0x0087F143+2981091]
+        GetHandleVerifier [0x008D2FF9+3324825]
+        GetHandleVerifier [0x0063B32F+605903]
+        GetHandleVerifier [0x00642CBC+637020]
+        (No symbol) [0x00546F4D]
+        (No symbol) [0x00543DD8]
+        (No symbol) [0x00543F75]
+        (No symbol) [0x00536406]
+        BaseThreadInitThunk [0x75C07BA9+25]
+        RtlInitializeExceptionChain [0x77BAC11B+107]
+        RtlClearBits [0x77BAC09F+191]
+
+
+DevTools listening on ws://127.0.0.1:51695/devtools/browser/d735d3d6-9cfe-4d17-adb7-589ad76dbd67
+
+DevTools listening on ws://127.0.0.1:51700/devtools/browser/efb6c10e-79a8-4d2c-9ed5-f03c1b3d577b
+
+DevTools listening on ws://127.0.0.1:51702/devtools/browser/7e3e85cb-3191-4eaf-ad25-f0ec5bfeca5d
+Error processing 41nblnEkJ3L.jpg: Message: 
+Stacktrace:
+        GetHandleVerifier [0x005AD933+25811]
+        (No symbol) [0x0053E314]
+        (No symbol) [0x00432523]
+        (No symbol) [0x00477483]
+        (No symbol) [0x0047765B]
+        (No symbol) [0x004B6BA2]
+        (No symbol) [0x0049AD74]
+        (No symbol) [0x004B46F0]
+        (No symbol) [0x0049AAC6]
+        (No symbol) [0x0046BEFD]
+        (No symbol) [0x0046C8FD]
+        GetHandleVerifier [0x0087F143+2981091]
+        GetHandleVerifier [0x008D2FF9+3324825]
+        GetHandleVerifier [0x0063B32F+605903]
+        GetHandleVerifier [0x00642CBC+637020]
+        (No symbol) [0x00546F4D]
+        (No symbol) [0x00543DD8]
+        (No symbol) [0x00543F75]
+        (No symbol) [0x00536406]
+        BaseThreadInitThunk [0x75C07BA9+25]
+        RtlInitializeExceptionChain [0x77BAC11B+107]
+        RtlClearBits [0x77BAC09F+191]
+
+Error processing 41ADVPQgZOL.jpg: Message: 
+Stacktrace:
+        GetHandleVerifier [0x005AD933+25811]
+        (No symbol) [0x0053E314]
+        (No symbol) [0x00432523]
+        (No symbol) [0x00477483]
+        (No symbol) [0x0047765B]
+        (No symbol) [0x004B6BA2]
+        (No symbol) [0x0049AD74]
+        (No symbol) [0x004B46F0]
+        (No symbol) [0x0049AAC6]
+        (No symbol) [0x0046BEFD]
+        (No symbol) [0x0046C8FD]
+        GetHandleVerifier [0x0087F143+2981091]
+        GetHandleVerifier [0x008D2FF9+3324825]
+        GetHandleVerifier [0x0063B32F+605903]
+        GetHandleVerifier [0x00642CBC+637020]
+        (No symbol) [0x00546F4D]
+        (No symbol) [0x00543DD8]
+        (No symbol) [0x00543F75]
+        (No symbol) [0x00536406]
+        BaseThreadInitThunk [0x75C07BA9+25]
+        (No symbol) [0x00543DD8]
+        (No symbol) [0x00543F75]
+        (No symbol) [0x00536406]
+        (No symbol) [0x00543DD8]
+        (No symbol) [0x00543DD8]
+        (No symbol) [0x00543DD8]
+        (No symbol) [0x00543DD8]
+        (No symbol) [0x00543F75]
+        (No symbol) [0x00536406]
+        BaseThreadInitThunk [0x75C07BA9+25]
+        RtlInitializeExceptionChain [0x77BAC11B+107]
+        RtlClearBits [0x77BAC09F+191]
+
+Created TensorFlow Lite XNNPACK delegate for CPU.
+Error processing 41nblnEkJ3L.jpg: Message: 
+Stacktrace:
+        GetHandleVerifier [0x005AD933+25811]
+        (No symbol) [0x0053E314]
+        (No symbol) [0x00432523]
+        (No symbol) [0x00477483]
+        (No symbol) [0x0047765B]
+        (No symbol) [0x004B6BA2]
+        (No symbol) [0x0049AD74]
+        (No symbol) [0x004B46F0]
+        (No symbol) [0x0049AAC6]
+        (No symbol) [0x0046BEFD]
+        (No symbol) [0x0046C8FD]
+        GetHandleVerifier [0x0087F143+2981091]
+        GetHandleVerifier [0x008D2FF9+3324825]
+        GetHandleVerifier [0x0063B32F+605903]
+        GetHandleVerifier [0x00642CBC+637020]
+        (No symbol) [0x00546F4D]
+        (No symbol) [0x00543DD8]
+        (No symbol) [0x00543F75]
+        (No symbol) [0x00536406]
+        BaseThreadInitThunk [0x75C07BA9+25]
+        RtlInitializeExceptionChain [0x77BAC11B+107]
+        RtlClearBits [0x77BAC09F+191]
+
+Traceback (most recent call last):
+  File "c:\Users\Sukhvansh Jain\Documents\Projects and Competitions\Amazon ML Challenge\PS\Amazon_ml_challange\seleniumScriptInternVLM2.py", line 89, in <module>
+    process_all_images()
+  File "c:\Users\Sukhvansh Jain\Documents\Projects and Competitions\Amazon ML Challenge\PS\Amazon_ml_challange\seleniumScriptInternVLM2.py", line 79, in process_all_images
+    result = future.result()
+  File "C:\Users\Sukhvansh Jain\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\_base.py", line 458, in result
+    return self.__get_result()
+  File "C:\Users\Sukhvansh Jain\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\_base.py", line 403, in __get_result
+    raise self._exception
+  File "C:\Users\Sukhvansh Jain\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "c:\Users\Sukhvansh Jain\Documents\Projects and Competitions\Amazon ML Challenge\PS\Amazon_ml_challange\seleniumScriptInternVLM2.py", line 35, in process_image
+    image_path = download_image(image_url)  # Download image
+  File "c:\Users\Sukhvansh Jain\Documents\Projects and Competitions\Amazon ML Challenge\PS\Amazon_ml_challange\seleniumScriptInternVLM2.py", line 27, in download_image
+    response = requests.get(image_url)
+  File "C:\Users\Sukhvansh Jain\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "C:\Users\Sukhvansh Jain\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\Sukhvansh Jain\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 575, in request
+    prep = self.prepare_request(req)
+  File "C:\Users\Sukhvansh Jain\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 484, in prepare_request
+    p.prepare(
+  File "C:\Users\Sukhvansh Jain\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\models.py", line 367, in prepare
+    self.prepare_url(url, params)
+  File "C:\Users\Sukhvansh Jain\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\models.py", line 438, in prepare_url
+    raise MissingSchema(
+requests.exceptions.MissingSchema: Invalid URL 'image_link': No scheme supplied. Perhaps you meant https://image_link?
+
+I am getting this on running the script. Fix the issues and also use InternVLM2 model
