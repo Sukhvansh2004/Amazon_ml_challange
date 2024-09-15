@@ -41,3 +41,48 @@ Allowed Units:
 }
 
 2. If no relevant data is found or the query cannot be answered based on the image content, return -1."
+
+
+"
+Extract relevant information from the image based on the following:
+
+1. Return a value in the format “x unit,” where x is a float number and the unit is from the allowed list (e.g., "2 gram", "12.5 centimetre").
+2. If no relevant data is found or the query cannot be answered, return -1.
+
+Allowed Units:
+{
+    'width': {'centimetre', 'foot', 'inch', 'metre', 'millimetre', 'yard'},
+    'depth': {'centimetre', 'foot', 'inch', 'metre', 'millimetre', 'yard'},
+    'height': {'centimetre', 'foot', 'inch', 'metre', 'millimetre', 'yard'},
+    'item_weight': {'gram', 'kilogram', 'microgram', 'milligram', 'ounce', 'pound', 'ton'},
+    'maximum_weight_recommendation': {'gram', 'kilogram', 'microgram', 'milligram', 'ounce', 'pound', 'ton'},
+    'voltage': {'kilovolt', 'millivolt', 'volt'},
+    'wattage': {'kilowatt', 'watt'},
+    'item_volume': {'centilitre', 'cubic foot', 'cubic inch', 'cup', 'decilitre', 'fluid ounce', 'gallon', 'imperial gallon', 'litre', 'microlitre', 'millilitre', 'pint', 'quart'}
+}
+"
+
+"""
+Extract relevant information from the image based on the following:
+
+1. Data Extraction: Extract dimensions (width, height, depth), weight, volume, wattage, voltage, or maximum weight recommendation using OCR and visual cues.
+
+2. Return Format: Output as “x unit,” where x is a float and unit is from the allowed list below. Example: “2.5 inch”, “500 gram”. If data is not found or is invalid, return -1.
+
+3. Allowed Units:
+{
+    'width': {'centimetre', 'foot', 'inch', 'metre', 'millimetre', 'yard'},
+    'depth': {'centimetre', 'foot', 'inch', 'metre', 'millimetre', 'yard'},
+    'height': {'centimetre', 'foot', 'inch', 'metre', 'millimetre', 'yard'},
+    'item_weight': {'gram', 'kilogram', 'microgram', 'milligram', 'ounce', 'pound', 'ton'},
+    'maximum_weight_recommendation': {'gram', 'kilogram', 'microgram', 'milligram', 'ounce', 'pound', 'ton'},
+    'voltage': {'kilovolt', 'millivolt', 'volt'},
+    'wattage': {'kilowatt', 'watt'},
+    'item_volume': {'centilitre', 'cubic foot', 'cubic inch', 'cup', 'decilitre', 'fluid ounce', 'gallon', 'imperial gallon', 'litre', 'microlitre', 'millilitre', 'pint', 'quart'}
+}
+
+4. Examples:
+
+Image shows “Height: 12 inches” → Return: “12 inch”
+No relevant data → Return: -1
+"""

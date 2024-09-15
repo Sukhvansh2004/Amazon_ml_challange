@@ -2,16 +2,16 @@ import os
 import csv
 import requests
 from urllib.parse import urlparse
-from concurrent.futures import ProcessPoolExecutor
+from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor
 
 # Create directories to save the images and failed download log
-output_dir = "testImages"
+output_dir = "trainImages"
 os.makedirs(output_dir, exist_ok=True)
 
 # CSV file paths and the column name that contains the image links
-csv_file_path = r"dataset\test.csv"
-output_csv_file_path = r"dataset\testImagePath.csv"
-failed_csv_file_path = r"dataset\failed_downloads.csv"
+csv_file_path = r"dataset/train.csv"
+output_csv_file_path = r"dataset/trainImagePath.csv"
+failed_csv_file_path = r"dataset/failed_downloads.csv"
 image_column_name = "image_link"
 
 # List to store rows for the new CSV and failed downloads
@@ -42,11 +42,13 @@ def download_image(url):
         # print(f"Failed to download {url}. Error: {e}")
         return None
 
-# Function to process a batch of URLs and update the corresponding rows
+# Function to process a batch of URLs in parallel using threads
 def process_url_chunk(url_chunk):
     processed_rows = []
     failed_rows_chunk = []
-    for row in url_chunk:
+
+    # Threaded image downloading
+    def download_and_update_row(row):
         image_url = row[image_column_name]
         image_path = download_image(image_url)  # Download and get the local path or check if it exists
         if image_path:
@@ -54,6 +56,11 @@ def process_url_chunk(url_chunk):
         else:
             failed_rows_chunk.append(row)  # Append the failed download row
         processed_rows.append(row)  # Save the updated row
+
+    # Using ThreadPoolExecutor for multithreading inside each chunk
+    with ThreadPoolExecutor() as thread_executor:
+        thread_executor.map(download_and_update_row, url_chunk)
+
     return processed_rows, failed_rows_chunk
 
 # Function to read URLs from CSV and split data into chunks for multiprocessing
@@ -76,7 +83,7 @@ if __name__ == "__main__":
 
     # Use ProcessPoolExecutor to parallelize the work across CPU cores
     with ProcessPoolExecutor() as process_executor:
-        # Process the chunks in parallel
+        # Process the chunks in parallel using multiprocessing
         results = process_executor.map(process_url_chunk, url_chunks)
 
     # Collect all updated rows and failed downloads from the processed chunks
