@@ -2,7 +2,7 @@ import pandas as pd
 import re
 
 # Load the CSV file
-file_path = 'results_item_weight.csv'  # Replace with your actual file path
+file_path = 'results_maximum_weight_recommendation.csv'  # Replace with your actual file path
 df = pd.read_csv(file_path)
 
 # Function to extract and clean the first valid weight value with full unit expansion
@@ -12,35 +12,46 @@ def clean_weight_value(value):
     
     # Regular expressions for weight units and their full forms
     weight_unit_mappings = {
-        'g': 'grams',
-        'gm': 'grams',
-        'gram': 'grams',
-        'kg': 'kilograms',
-        'kilogram': 'kilograms',
-        'mg': 'milligrams',
-        'milligram': 'milligrams',
-        'mcg': 'micrograms',
-        'microgram': 'micrograms',
-        'oz': 'ounces',
-        'ounce': 'ounces',
-        'lb': 'pounds',
-        'lbs': 'pounds',
-        'pound': 'pounds',
-        'ton': 'tons',
-        'tons': 'tons',
-        'grams': 'grams',
-        'kilograms': 'kilograms',
-        'milligrams': 'milligrams',
-        'micrograms': 'micrograms',
-        'pounds': 'pounds',
-        'ounces': 'ounces'
-    }
+        'g': 'gram',
+        'gm': 'gram',
+        'gram': 'gram',
+        'kg': 'kilogram',
+        'kilogram': 'kilogram',
+        'mg': 'milligram',
+        'milligram': 'milligram',
+        'mcg': 'microgram',
+        'microgram': 'microgram',
+        'oz': 'ounce',
+        'ounce': 'ounce',
+        'lb': 'pound',
+        'lbs': 'pound',
+        'LBS' : 'pound',
+        'pound': 'pound',
+        'ton': 'ton',
+        'tons': 'ton',
+        'grams': 'gram',
+        'kilograms': 'kilogram',
+        'milligrams': 'milligram',
+        'micrograms': 'microgram',
+        'pounds': 'pound',
+        'ounces': 'ounce',
+        "g": "gram",
+        "kg": "kilogram",
+        "mg": "milligram",
+        "oz": "ounce",
+        "oz.": "ounce",
+        "lb": "pound",
+        "lbs": "pound",
+        "t": "ton",
+        "μg": "microgram",
+        "mcg": "microgram"
+    } 
 
     # List of valid weight-related units
     valid_weight_units = list(weight_unit_mappings.keys())
 
-    # Regular expression to match numbers followed by units
-    match = re.search(r'(\d+\.?\d*)\s*([a-zA-Z.\s]+)', value)
+    # Regular expression to match numbers followed by units (ignore extra text like 'TOP')
+    match = re.search(r'(\d+\.?\d*)\s*([a-zA-Z.]+)', value)
     if match:
         weight, unit = match.groups()
         unit = unit.strip().lower().replace('.', '')  # Normalize unit string by removing periods
@@ -61,7 +72,7 @@ def clean_weight_value(value):
 df['predicted_value_cleaned'] = df['predicted_value'].apply(clean_weight_value)
 
 # Save the cleaned data to a new CSV file
-output_file = 'cleaned_results_item_weight.csv'
+output_file = 'cleaned_results_maximum_weight_recommendation.csv'
 df.to_csv(output_file, index=False)
 
 print(f"Cleaned data saved to {output_file}")

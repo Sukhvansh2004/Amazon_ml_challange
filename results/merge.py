@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Specify the directory containing the CSV files and the file pattern
-csv_files = ['cleaned_results_item_volume.csv', 'cleaned_results_item_weight.csv']
+csv_files = ['cleaned_results_item_volume.csv', 'cleaned_results_item_weight.csv', 'cleaned_results_maximum_weight_recommendation.csv', 'cleaned_results_voltage_values.csv', 'cleaned_results_wattage_values.csv']
 
 # Initialize an empty list to store individual DataFrames
 df_list = []

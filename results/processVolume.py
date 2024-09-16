@@ -12,19 +12,33 @@ def clean_volume_value(value):
     
     # Regular expressions for volume units and their full forms (case-insensitive)
     unit_mappings = {
-        'ml': 'milliliters', 'millilitre': 'milliliters', 'millilitres': 'milliliters',
-        'cl': 'centiliters', 'centilitre': 'centiliters', 'centilitres': 'centiliters',
-        'dl': 'deciliters', 'decilitre': 'deciliters', 'decilitres': 'deciliters',
-        'l': 'liters', 'litre': 'liters', 'liters': 'liters', 'liter': 'liters',
-        'fl oz': 'fluid ounces', 'fl. oz.': 'fluid ounces', 'fluid ounce': 'fluid ounces', 'fluid ounces': 'fluid ounces', 'FL OZ': 'fluid ounces', 'FL. OZ.': 'fluid ounces',
-        'cup': 'cups', 'cups': 'cups',
-        'pint': 'pints', 'pints': 'pints',
-        'quart': 'quarts', 'quarts': 'quarts',
-        'gallon': 'gallons', 'gallons': 'gallons',
-        'imperial gallon': 'imperial gallons', 'imperial gallons': 'imperial gallons',
-        'oz': 'ounces', 'ounce': 'ounces', 'ounces': 'ounces',
-        'cubic foot': 'cubic feet', 'cubic feet': 'cubic feet',
-        'cubic inch': 'cubic inches', 'cubic inches': 'cubic inches'
+        'ml': 'millilitre', 'millilitre': 'millilitre', 'millilitres': 'millilitre',
+        'cl': 'centilitre', 'centilitre': 'centilitre', 'centilitres': 'centilitre',
+        'dl': 'decilitre', 'decilitre': 'decilitre', 'decilitres': 'decilitre',
+        'l': 'litre', 'litre': 'liter', 'litre': 'litre', 'liter': 'litre', 'litre' : 'litre',
+        'fl oz': 'fluid ounce', 'fl. oz.': 'fluid ounce', 'fluid ounce': 'fluid ounce', 'fluid ounces': 'fluid ounce', 'FL OZ': 'fluid ounce', 'FL. OZ.': 'fluid ounce', 'FL.OZ.': 'fluid ounce', 'fluid oz': 'fluid ounce',
+        'cup': 'cup', 'cups': 'cup',
+        'pint': 'pint', 'pints': 'pint',
+        'quart': 'quart', 'quarts': 'quart',
+        'gallon': 'gallon', 'gallons': 'gallon',
+        'imperial gallon': 'imperial gallon', 'imperial gallons': 'imperial gallon',
+        'oz': 'ounce', 'ounce': 'ounce', 'ounces': 'ounce',
+        'cubic foot': 'cubic foot', 'cubic feet': 'cubic foot',
+        'cubic inch': 'cubic inch', 'cubic inches': 'cubic inch',
+        "fl": "fluid ounce",
+        "l": "liter",
+        "ml": "milliliter",
+        "cl": "centiliter",
+        "fl oz": "fluid ounce",
+        "fl. oz.": "fluid ounce",
+        "fl.": "fluid ounce",
+        "fluid": "fluid ounce",
+        "gal": "gallon",
+        "pt": "pint",
+        "qt": "quart",
+        "imp gal": "imperial gallon",
+        "c": "cup",
+        "dl": "deciliter"
     }
     
     # Regular expression to match numbers followed by units (accounting for periods and spaces)
