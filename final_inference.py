@@ -3,12 +3,12 @@ import os
 from lmdeploy import pipeline, TurbomindEngineConfig
 from lmdeploy.vl import load_image
 
-path="testImages"
+path = "testImages"
 # Function to get predictions
 def get_prediction(image_name, entity_name, pipe):
     #image = load_image(image_name)
-    modified_file_path=image_name.split('/')[-1]
-    image=load_image(f'{path}/{modified_file_path}')
+    modified_file_path = image_name.split('/')[-1]
+    image = load_image(f'{path}/{modified_file_path}')
     query = f"""What is the {entity_name} of the product? Only return the numerical value with the unit. Follow the following return format:
     Output only the extracted value in the format "x unit," where x is a float and unit is from the allowed list below.
     - Do not include any additional text except for units.
@@ -19,7 +19,9 @@ def get_prediction(image_name, entity_name, pipe):
 
 # Process each entity-specific CSV file
 entity_files = [r'maximum_weight_recommendation.csv']
-i=1
+batch_size = 100  # Save results after processing every 100 rows
+#i = 1
+
 for entity_file in entity_files:
     # Extract entity_name from the filename
     entity_name = os.path.splitext(entity_file)[0]
@@ -74,6 +76,17 @@ for entity_file in entity_files:
     # Load the CSV file for the current entity_name
     entity_df = pd.read_csv(os.path.join('entity_csvs', entity_file), index_col=0)  # Use the original index
 
+    # Check if results file already exists to resume
+    output_filename = f'results_{entity_name}.csv'
+    if os.path.exists(output_filename):
+        processed_df = pd.read_csv(output_filename)
+        # Get the index of the last processed row
+        last_processed_index = processed_df['original_index'].max()
+        # Filter out already processed rows
+        entity_df = entity_df[entity_df.index > last_processed_index]
+    else:
+        processed_df = pd.DataFrame()
+
     # Prepare lists to store results
     results = []
 
@@ -81,7 +94,6 @@ for entity_file in entity_files:
     for _, row in entity_df.iterrows():
         original_index = row.name  # Original index from the DataFrame
         image_link = row['image_link']
-        #actual_value = row['entity_value']
         
         # Get prediction for the current image and entity
         predicted_value = get_prediction(image_link, entity_name, pipe)
@@ -92,16 +104,22 @@ for entity_file in entity_files:
             'image_link': image_link,
             'predicted_value': predicted_value
         })
-        #print(f"Processed row {original_index} for entity '{entity_name}': Predicted Value: {predicted_value}")
-        #if(i%500==0):
-        print(i)
-        i=i+1
-        #torch.cuda.empty_cache()  # Clear GPU memory
-        #gc.collect()  # Run garbage collector
-    # Convert results to a DataFrame
-    result_df = pd.DataFrame(results)
+        
+        # Save results after processing every 'batch_size' rows or at the end of the loop
+        if len(results) >= batch_size:
+            # Append new results to the CSV file
+            results_df = pd.DataFrame(results)
+            processed_df = pd.concat([processed_df, results_df], ignore_index=True)
+            processed_df.to_csv(output_filename, index=False)
+            print(f"Saved {len(results)} results to {output_filename}")
+            results = []  # Clear the results list
 
-    # Save results to a CSV file for the current entity_name
-    output_filename = f'results_{entity_name}.csv'
-    result_df.to_csv(output_filename, index=False)  # Save without adding new index
-    print(f"Results for entity '{entity_name}' saved to {output_filename}")
+#        print(f"Processed row {original_index} for entity '{entity_name}': Predicted Value: {predicted_value}")
+#        i += 1
+
+    # Save any remaining results at the end of processing
+    if results:
+        results_df = pd.DataFrame(results)
+        processed_df = pd.concat([processed_df, results_df], ignore_index=True)
+        processed_df.to_csv(output_filename, index=False)
+        print(f"Final results for entity '{entity_name}' saved to {output_filename}")
