@@ -18,7 +18,7 @@ def get_prediction(image_name, entity_name, pipe):
     return response.text.strip()
 
 # Process each entity-specific CSV file
-entity_files = [r'voltage.csv']
+entity_files = [r'maximum_weight_recommendation.csv']
 i=1
 for entity_file in entity_files:
     # Extract entity_name from the filename
@@ -51,7 +51,9 @@ for entity_file in entity_files:
         'voltage': ['kilovolt', 'millivolt', 'volt'],
         'wattage': ['kilowatt', 'watt'],
         'item_volume': ['centilitre', 'cubic foot', 'cubic inch', 'cup', 'decilitre', 'fluid ounce', 'gallon',
-                        'imperial gallon', 'litre', 'millilitre', 'pint', 'quart']
+                        'imperial gallon', 'litre', 'millilitre', 'pint', 'quart'],
+        'weight' : ['gram', 'kilogram', 'microgram', 'milligram', 'ounce', 'pound', 'ton'],
+        'maximum_weight_recommendation' : ['gram', 'kilogram', 'microgram', 'milligram', 'ounce', 'pound', 'ton']
     }
 
     4. Examples:
