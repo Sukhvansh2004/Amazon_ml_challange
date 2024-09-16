@@ -1,4 +1,4 @@
-original_index,image_link,predicted_value,predicted_value_cleaned
+index,image_link,predicted_value,prediction
 22,https://m.media-amazon.com/images/I/21DZ7BAZ6-L.jpg,15.0 ml,15.0 milliliters
 101,https://m.media-amazon.com/images/I/31-Jdk3SMUL.jpg,2.0 fl oz,2.0 fluid ounces
 147,https://m.media-amazon.com/images/I/310uxz1C1+L.jpg,8.85 FL OZ,8.85 fluid ounces

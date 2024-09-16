@@ -20,7 +20,7 @@ def get_prediction(image_name, entity_name, pipe):
 # Process each entity-specific CSV file
 entity_files = [r'maximum_weight_recommendation.csv']
 batch_size = 100  # Save results after processing every 100 rows
-#i = 1
+i = 1
 
 for entity_file in entity_files:
     # Extract entity_name from the filename
@@ -105,17 +105,17 @@ for entity_file in entity_files:
             'predicted_value': predicted_value
         })
         
+        i += 1
         # Save results after processing every 'batch_size' rows or at the end of the loop
         if len(results) >= batch_size:
             # Append new results to the CSV file
             results_df = pd.DataFrame(results)
             processed_df = pd.concat([processed_df, results_df], ignore_index=True)
             processed_df.to_csv(output_filename, index=False)
-            print(f"Saved {len(results)} results to {output_filename}")
+            print(f"Saved {i} results to {output_filename}")
             results = []  # Clear the results list
 
 #        print(f"Processed row {original_index} for entity '{entity_name}': Predicted Value: {predicted_value}")
-#        i += 1
 
     # Save any remaining results at the end of processing
     if results:

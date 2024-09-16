@@ -1,4 +1,4 @@
-original_index,image_link,predicted_value,predicted_value_cleaned
+index,image_link,predicted_value,prediction
 10,https://m.media-amazon.com/images/I/213oP6n7jtL.jpg,500 gram,500 grams
 15,https://m.media-amazon.com/images/I/216rjgJHAeL.jpg,9.0 pound,9.0 pounds
 17,https://m.media-amazon.com/images/I/218BCzgKxuL.jpg,0.0,
